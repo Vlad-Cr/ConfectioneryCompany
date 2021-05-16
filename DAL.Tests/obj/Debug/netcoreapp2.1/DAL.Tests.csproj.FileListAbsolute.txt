@@ -3,3 +3,15 @@ E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\obj\Debug\netcoreapp2.1\DAL.Test
 E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\obj\Debug\netcoreapp2.1\DAL.Tests.csproj.CoreCompileInputs.cache
 E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\obj\Debug\netcoreapp2.1\DAL.Tests.AssemblyInfoInputs.cache
 E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\obj\Debug\netcoreapp2.1\DAL.Tests.AssemblyInfo.cs
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\bin\Debug\netcoreapp2.1\DAL.Tests.deps.json
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\bin\Debug\netcoreapp2.1\DAL.Tests.runtimeconfig.json
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\bin\Debug\netcoreapp2.1\DAL.Tests.runtimeconfig.dev.json
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\bin\Debug\netcoreapp2.1\DAL.Tests.dll
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\bin\Debug\netcoreapp2.1\DAL.Tests.pdb
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\bin\Debug\netcoreapp2.1\DAL.pdb
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\obj\Debug\netcoreapp2.1\DAL.Tests.csproj.CopyComplete
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\obj\Debug\netcoreapp2.1\DAL.Tests.dll
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\obj\Debug\netcoreapp2.1\DAL.Tests.pdb

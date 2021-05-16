@@ -11,7 +11,7 @@ namespace DAL.EF
 		public DbSet<Report> Reports { get; set; }
 		public DbSet<Product> Products { get; set; }
 		public DbSet<Outlet> Outlets { get; set; }
-​
+		
         public ConfectioneryCompanyContext(DbContextOptions options)
 			: base(options)
 		{

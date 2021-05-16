@@ -2,9 +2,5 @@ E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\bin\Debug\Confectio
 E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\bin\Debug\ConfectioneryCompanyDB.dll
 E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\bin\Debug\ConfectioneryCompanyDB.pdb
 E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\obj\Debug\ConfectioneryCompanyDB.sqlprojAssemblyReference.cache
-E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\obj\Debug\Model.xml
-E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\obj\Debug\refactor.xml
-E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\obj\Debug\postdeploy.sql
-E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\obj\Debug\predeploy.sql
 E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\obj\Debug\ConfectioneryCompanyDB.dll
 E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\obj\Debug\ConfectioneryCompanyDB.pdb

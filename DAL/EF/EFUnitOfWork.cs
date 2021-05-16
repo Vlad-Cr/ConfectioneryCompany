@@ -16,7 +16,7 @@ namespace DAL.EF
 		private IReportRepository reportRepository;
 		private IProductRepository productRepository;
 		private IOutletIRepository outletRepository;
-​
+		
         public EFUnitOfWork(DbContextOptions options)
 		{
 			db = new ConfectioneryCompanyContext(options);
@@ -35,7 +35,7 @@ namespace DAL.EF
 				return reportRepository;
 			}
 		}
-​
+		
         public IProductRepository Products
 		{
 			get
@@ -55,14 +55,14 @@ namespace DAL.EF
 				return outletRepository;
 			}
 		}
-​
+		
         public void Save()
 		{
 			db.SaveChanges();
 		}
-​
+		
         private bool disposed = false;
-​
+		
         public virtual void Dispose(bool disposing)
 		{
 			if (!this.disposed)
@@ -74,7 +74,7 @@ namespace DAL.EF
 				this.disposed = true;
 			}
 		}
-​
+		
         public void Dispose()
 		{
 			Dispose(true);
