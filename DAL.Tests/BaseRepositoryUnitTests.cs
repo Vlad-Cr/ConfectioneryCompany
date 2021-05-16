@@ -1,6 +1,7 @@
 ﻿using DAL.EF;
 using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Moq;
 using System;
 using Xunit;
@@ -33,30 +34,28 @@ namespace DAL.Tests
 		public void Get_InputId_CalledFindMethodOfDBSetWithCorrectId()
 		{
 			// Arrange
-			DbContextOptions opt = new DbContextOptionsBuilder<ConfectioneryCompanyContext>()
-				.Options;
+			DbContextOptions opt = new DbContextOptionsBuilder<ConfectioneryCompanyContext>().Options;
 			var mockContext = new Mock<ConfectioneryCompanyContext>(opt);
 			var mockDbSet = new Mock<DbSet<Report>>();
-			mockContext.Setup(context => context.Set<Report>()).Returns(mockDbSet.Object);
 
+			mockContext.Setup(context => context.Set<Report>()).Returns(mockDbSet.Object);
 			Report expectedReport = new Report() { Id = 1 };
 			mockDbSet.Setup(mock => mock.Find(expectedReport.Id)).Returns(expectedReport);
 			var repository = new TestReportRepository(mockContext.Object);
 
 			//Act
-			var actualStreet = repository.Get(expectedReport.Id);
+			var actualReport = repository.Get(expectedReport.Id);
 
 			// Assert
 			mockDbSet.Verify(dbSet => dbSet.Find(expectedReport.Id), Times.Once());
-			Assert.Equal(expectedReport, actualStreet);
+			Assert.Equal(expectedReport, actualReport);
 		}
 
 		[Fact]
 		public void Delete_InputId_CalledFindAndRemoveMethodsOfDBSetWithCorrectArg()
 		{
 			// Arrange
-			DbContextOptions opt = new DbContextOptionsBuilder<ConfectioneryCompanyContext>()
-				.Options;
+			DbContextOptions opt = new DbContextOptionsBuilder<ConfectioneryCompanyContext>().Options;
 			var mockContext = new Mock<ConfectioneryCompanyContext>(opt);
 			var mockDbSet = new Mock<DbSet<Report>>();
 
