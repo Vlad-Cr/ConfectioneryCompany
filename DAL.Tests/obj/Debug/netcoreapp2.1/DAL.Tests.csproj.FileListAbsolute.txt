@@ -1,0 +1,5 @@
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\bin\Debug\netcoreapp2.1\DAL.dll
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\obj\Debug\netcoreapp2.1\DAL.Tests.csprojAssemblyReference.cache
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\obj\Debug\netcoreapp2.1\DAL.Tests.csproj.CoreCompileInputs.cache
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\obj\Debug\netcoreapp2.1\DAL.Tests.AssemblyInfoInputs.cache
+E:\C# Projects\ConfectioneryCompanyDB\DAL.Tests\obj\Debug\netcoreapp2.1\DAL.Tests.AssemblyInfo.cs

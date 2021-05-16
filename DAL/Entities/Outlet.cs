@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DAL.Entities
 {
-	class Outlet
+	public class Outlet
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }

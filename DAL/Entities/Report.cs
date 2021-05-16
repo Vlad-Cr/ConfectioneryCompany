@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DAL.Entities
 {
-	class Report
+	public class Report
 	{
 		public int Id { get; set; }
 		public DateTime Date { get; set; }

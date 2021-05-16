@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DAL.Repositories.Interfaces
 {
-	interface ProductRepository : IRepository<Product>
+	public interface IProductRepository : IRepository<Product>
 	{
 	}
 }
