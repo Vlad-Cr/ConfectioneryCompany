@@ -1,6 +1,0 @@
-E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\bin\Debug\ConfectioneryCompanyDB.dacpac
-E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\bin\Debug\ConfectioneryCompanyDB.dll
-E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\bin\Debug\ConfectioneryCompanyDB.pdb
-E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\obj\Debug\ConfectioneryCompanyDB.sqlprojAssemblyReference.cache
-E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\obj\Debug\ConfectioneryCompanyDB.dll
-E:\C# Projects\ConfectioneryCompanyDB\ConfectioneryCompanyDB\obj\Debug\ConfectioneryCompanyDB.pdb
