@@ -15,7 +15,7 @@ namespace BLL.Services.Impl
 	{
 		private readonly IUnitOfWork _database;
 		private int pageSize = 10;
-​
+		
         public ReportService(IUnitOfWork unitOfWork)
 		{
 			if (unitOfWork == null)
@@ -24,7 +24,7 @@ namespace BLL.Services.Impl
 			}
 			_database = unitOfWork;
 		}
-​
+		
         /// <exception cref="MethodAccessException"></exception>
         public IEnumerable<ReportDTO> GetReports(int pageNumber)
 		{

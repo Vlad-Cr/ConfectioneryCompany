@@ -5,3 +5,10 @@ E:\C# Projects\ConfectioneryCompanyDB\BLL\obj\Debug\netcoreapp2.1\BLL.csprojAsse
 E:\C# Projects\ConfectioneryCompanyDB\BLL\obj\Debug\netcoreapp2.1\BLL.csproj.CoreCompileInputs.cache
 E:\C# Projects\ConfectioneryCompanyDB\BLL\obj\Debug\netcoreapp2.1\BLL.AssemblyInfoInputs.cache
 E:\C# Projects\ConfectioneryCompanyDB\BLL\obj\Debug\netcoreapp2.1\BLL.AssemblyInfo.cs
+E:\C# Projects\ConfectioneryCompanyDB\BLL\bin\Debug\netcoreapp2.1\BLL.deps.json
+E:\C# Projects\ConfectioneryCompanyDB\BLL\bin\Debug\netcoreapp2.1\BLL.dll
+E:\C# Projects\ConfectioneryCompanyDB\BLL\bin\Debug\netcoreapp2.1\BLL.pdb
+E:\C# Projects\ConfectioneryCompanyDB\BLL\bin\Debug\netcoreapp2.1\CCL.pdb
+E:\C# Projects\ConfectioneryCompanyDB\BLL\obj\Debug\netcoreapp2.1\BLL.csproj.CopyComplete
+E:\C# Projects\ConfectioneryCompanyDB\BLL\obj\Debug\netcoreapp2.1\BLL.dll
+E:\C# Projects\ConfectioneryCompanyDB\BLL\obj\Debug\netcoreapp2.1\BLL.pdb

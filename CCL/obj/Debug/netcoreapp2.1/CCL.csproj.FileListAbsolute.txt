@@ -1,0 +1,9 @@
+E:\C# Projects\ConfectioneryCompanyDB\CCL\obj\Debug\netcoreapp2.1\CCL.csprojAssemblyReference.cache
+E:\C# Projects\ConfectioneryCompanyDB\CCL\obj\Debug\netcoreapp2.1\CCL.csproj.CoreCompileInputs.cache
+E:\C# Projects\ConfectioneryCompanyDB\CCL\obj\Debug\netcoreapp2.1\CCL.AssemblyInfoInputs.cache
+E:\C# Projects\ConfectioneryCompanyDB\CCL\obj\Debug\netcoreapp2.1\CCL.AssemblyInfo.cs
+E:\C# Projects\ConfectioneryCompanyDB\CCL\bin\Debug\netcoreapp2.1\CCL.deps.json
+E:\C# Projects\ConfectioneryCompanyDB\CCL\bin\Debug\netcoreapp2.1\CCL.dll
+E:\C# Projects\ConfectioneryCompanyDB\CCL\bin\Debug\netcoreapp2.1\CCL.pdb
+E:\C# Projects\ConfectioneryCompanyDB\CCL\obj\Debug\netcoreapp2.1\CCL.dll
+E:\C# Projects\ConfectioneryCompanyDB\CCL\obj\Debug\netcoreapp2.1\CCL.pdb
