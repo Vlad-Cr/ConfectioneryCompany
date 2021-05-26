@@ -9,21 +9,33 @@ using System.Text;
 
 namespace DAL.EF
 {
-	internal class EFUnitOfWork
+	public class EFUnitOfWork
 		: IUnitOfWork
 	{
 		private ConfectioneryCompanyContext db;
 		private IReportRepository reportRepository;
 		private IProductRepository productRepository;
 		private IOutletIRepository outletRepository;
-		
-        public EFUnitOfWork(DbContextOptions options)
+		private IUserRepository userRepository;
+
+		public EFUnitOfWork(DbContextOptions options)
 		{
 			db = new ConfectioneryCompanyContext(options);
 		}
 
 		public EFUnitOfWork()
+ 		{
+
+ 		}
+
+		public IUserRepository Users
 		{
+			get
+			{
+				if (userRepository == null)
+					userRepository = new UserRepository(db);
+				return userRepository;
+			}
 		}
 
 		public IReportRepository Reports

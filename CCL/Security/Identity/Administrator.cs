@@ -6,8 +6,8 @@ namespace CCL.Security.Identity
 {
 	public class Administrator : User
 	{
-		public Administrator(int userId, string name)
-			: base(userId, name, nameof(Administrator))
+		public Administrator(int userId, string name, string password, string email)
+			: base(userId, name, password, email, nameof(Administrator))
 		{
 		}
 	}

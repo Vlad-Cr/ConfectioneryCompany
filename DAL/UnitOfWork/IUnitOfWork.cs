@@ -10,6 +10,7 @@ namespace DAL.UnitOfWork
 		IReportRepository Reports { get; }
 		IProductRepository Products { get; }
 		IOutletIRepository Outlets { get; }
+		IUserRepository Users { get; }
 		void Save();
 	}
 }

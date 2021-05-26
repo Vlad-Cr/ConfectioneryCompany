@@ -31,7 +31,7 @@ namespace BLL.Tests
 		public void GetReports_UserIsAdministrator_ThrowMethodAccessException()
 		{
 			// Arrange
-			User user = new Administrator(1, "test");
+			User user = new Administrator(1, "test", "test", "test");
 			SecurityContext.SetUser(user);
 			var mockUnitOfWork = new Mock<IUnitOfWork>();
 			IReportService streetService = new ReportService(mockUnitOfWork.Object);
@@ -45,7 +45,7 @@ namespace BLL.Tests
 		public void GetReports_ReportFromDAL_CorrectMappingToReportDTO()
 		{
 			// Arrange
-			User user = new Director(1, "test");
+			User user = new Director(1, "test", "test", "test");
 			SecurityContext.SetUser(user);
 			var reportService = GetReportService();
 			

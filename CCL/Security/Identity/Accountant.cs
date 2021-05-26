@@ -6,8 +6,8 @@ namespace CCL.Security.Identity
 {
 	public class Accountant : User
 	{
-		public Accountant(int userId, string name)
-			: base(userId, name, nameof(Accountant))
+		public Accountant(int userId, string name, string password, string email)
+			: base(userId, name, password, email, nameof(Accountant))
 		{
 		}
 	}
