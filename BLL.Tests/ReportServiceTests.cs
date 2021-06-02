@@ -20,11 +20,10 @@ namespace BLL.Tests
 		public void Ctor_InputNull_ThrowArgumentNullException()
 		{
 			// Arrange
-			IUnitOfWork nullUnitOfWork = null;
-			
+			BaseReportService repService = null;
 			// Act
 			// Assert
-			Assert.Throws<ArgumentNullException>(() => new ReportService(nullUnitOfWork));
+			Assert.Throws<ArgumentNullException>(() => new ReportService(repService));
 		}
 
 		[Fact]
@@ -34,7 +33,8 @@ namespace BLL.Tests
 			User user = new Administrator(1, "test", "test", "test");
 			SecurityContext.SetUser(user);
 			var mockUnitOfWork = new Mock<IUnitOfWork>();
-			IReportService streetService = new ReportService(mockUnitOfWork.Object);
+			BaseReportService repService = new ClassicReportService(mockUnitOfWork.Object);
+			AbstractionReportService streetService = new ReportService(repService);
 			
 			// Act
 			// Assert
@@ -59,8 +59,8 @@ namespace BLL.Tests
 				&& actualReportDTO.RealizationRate > 69.0f
 			);
 		}
-		
-		IReportService GetReportService()
+
+		AbstractionReportService GetReportService()
 		{
 			var mockContext = new Mock<IUnitOfWork>();
 			var expectedReport = new Report()
@@ -74,8 +74,8 @@ namespace BLL.Tests
 				.Returns(new List<Report>() { expectedReport } );
 			mockContext.Setup(context =>context.Reports)
 				.Returns(mockDbSet.Object);
-			
-			 IReportService reportService = new ReportService(mockContext.Object);
+			BaseReportService repService = new ClassicReportService(mockContext.Object);
+			AbstractionReportService reportService = new ReportService(repService);
 			
 			return reportService;
 		}

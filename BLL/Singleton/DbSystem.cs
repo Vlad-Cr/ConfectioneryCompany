@@ -12,6 +12,7 @@ using AutoMapper;
 using BLL.FactoryMethod;
 using CCL.Security.Identity;
 using System.Linq;
+using BLL.Services.Interfaces;
 
 namespace BLL.Singleton
 {
@@ -48,7 +49,8 @@ namespace BLL.Singleton
 
 		public IEnumerable<ReportDTO> GetReports()
 		{
-			ReportService reportService = new ReportService(_db);
+			BaseReportService repServ = new ActualReportService(_db);
+			ReportService reportService = new ReportService(repServ);
 			return reportService.GetReports(0);
 		}
 
