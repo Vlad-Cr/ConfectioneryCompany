@@ -1,4 +1,6 @@
 ﻿using BLL.DTO;
+using BLL.Entities.Impl;
+using BLL.Entities.Interfaces;
 using BLL.Services.Interfaces;
 using DAL.Entities;
 using DAL.UnitOfWork;
@@ -11,7 +13,9 @@ namespace BLL.Services.Impl
 {
 	public class ActualReportService : BaseReportService
 	{
-		public ActualReportService(IUnitOfWork DB) : base(DB)
+        private WorkReport CurrentWorkReport;
+        
+        public ActualReportService(IUnitOfWork DB) : base(DB)
 		{
 		}
 
@@ -27,12 +31,50 @@ namespace BLL.Services.Impl
 			_db.Reports.Create(newRep);
 		}
 
-		public override ReportDTO CalculateReport(IEnumerable<ProductDTO> products)
-		{
-			throw new NotImplementedException();
-		}
+        public override void InitCalculation()
+        {
+            CountBorderOfReport = 100;
+        }
 
-		public override IEnumerable<ReportDTO> GetAll(int page)
+        public override void Calculate(IEnumerable<ProductDTO> products)
+        {
+            Random rand = new Random();
+            List<ProductDTO> productsList = new List<ProductDTO>();
+            productsList.AddRange(products);
+
+            CurrentWorkReport = new WorkReport(rand.Next(1000), DateTime.Now, productsList);
+            var iterator = CurrentWorkReport.GetIterator();
+
+            int countSpecialType = 0;
+            ProductDTO item = (ProductDTO)iterator.First();
+
+            while (!iterator.IsDone())
+            {
+                item = (ProductDTO)iterator.Next();
+
+                if (item.Type == "SpecialCake")
+                {
+                    countSpecialType++;
+                }
+            }
+
+            if (countSpecialType < 100)
+            {
+                CurrentWorkReport.RealizationRate = 0.3f;
+            }
+            else
+            {
+                CurrentWorkReport.RealizationRate = 0.8f;
+            }
+        }
+
+        public override ReportDTO AddFinalReport()
+        {
+            Add(CurrentWorkReport.GetReportDTO());
+            return CurrentWorkReport.GetReportDTO();
+        }
+
+        public override IEnumerable<ReportDTO> GetAll(int page)
 		{
 			var reportsEntities = _db.Reports.GetAll();
 			List<ReportDTO> reportsDto = new List<ReportDTO>();

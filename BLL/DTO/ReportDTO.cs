@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,5 +10,5 @@ namespace BLL.DTO
 		public int Id { get; set; }
 		public DateTime Date { get; set; }
 		public float RealizationRate { get; set; }
-	}
+    }
 }

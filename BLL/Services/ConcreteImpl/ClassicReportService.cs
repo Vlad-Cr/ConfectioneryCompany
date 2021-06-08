@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using BLL.DTO;
 using BLL.Services.Interfaces;
+using BLL.Translator.Impl;
+using BLL.Translator.Interface;
 using DAL.Entities;
 using DAL.UnitOfWork;
 using System;
@@ -12,7 +14,10 @@ namespace BLL.Services.Impl
 {
 	public class ClassicReportService : BaseReportService
 	{
-		public ClassicReportService(IUnitOfWork DB) : base(DB)
+        private ReportDTO currentReportDTO;
+
+
+        public ClassicReportService(IUnitOfWork DB) : base(DB)
 		{
 		}
 
@@ -20,39 +25,47 @@ namespace BLL.Services.Impl
 		{
 			var mapper = new MapperConfiguration(cfg => cfg.CreateMap<ReportDTO, Report>()).CreateMapper();
 			var DBreport = mapper.Map<ReportDTO, Report>(report);
-
-			_db.Reports.Create(DBreport);
+            
+            _db.Reports.Create(DBreport);
 		}
+        
+        public override void InitCalculation()
+        {
+            CountBorderOfReport = 200;
+            currentReportDTO = new ReportDTO();
+        }
 
-		public override ReportDTO CalculateReport(IEnumerable<ProductDTO> products)
-		{
-			ReportDTO repDTO = new ReportDTO();
-			int CountBorder = 200;
+        public override void Calculate(IEnumerable<ProductDTO> products)
+        {
+            if (products.Count() > CountBorderOfReport && products.Any(p => p.ProductionDate > DateTime.Now))
+            {
+                currentReportDTO.Date = DateTime.Now;
+                currentReportDTO.RealizationRate = 0.7f;
+            }
+            else
+            {
+                currentReportDTO.Date = DateTime.Now;
+                currentReportDTO.RealizationRate = 0.3f;
+            }
+        }
 
-			if(products.Count() > CountBorder && products.Any(p => p.ProductionDate > DateTime.Now))
-			{
-				repDTO.Date = DateTime.Now;
-				repDTO.RealizationRate = 0.7f;
-			}
-			else
-			{
-				repDTO.Date = DateTime.Now;
-				repDTO.RealizationRate = 0.3f;
-			}
+        public override ReportDTO AddFinalReport()
+        {
+            Add(currentReportDTO);
+            return currentReportDTO;
+        }
 
-			Add(repDTO);
-
-			return repDTO;
-		}
-
-		public override IEnumerable<ReportDTO> GetAll(int page)
+        public override IEnumerable<ReportDTO> GetAll(int page)
 		{
 			var reportsEntities = _db.Reports.GetAll();
+            
+            ITranslator mapTranslator = new MapTranslator();
+            //ITranslator simpleTranslator = new SimpleTranslator();
 
-			var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Report, ReportDTO>()).CreateMapper();
-			var reportsDto = mapper.Map<IEnumerable<Report>, List<ReportDTO>>(reportsEntities);
+            TranslatorContext context = new TranslatorContext(mapTranslator);
+            var reportsDto = context.ExecuteTranslate<Report, ReportDTO>(reportsEntities);
 
-			return reportsDto;
+            return reportsDto;
 		}
 
 		public override IEnumerable<ReportDTO> GetAllWithRate(int page, float Rate)

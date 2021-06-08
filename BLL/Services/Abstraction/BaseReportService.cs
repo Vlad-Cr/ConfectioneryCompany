@@ -9,8 +9,9 @@ namespace BLL.Services.Interfaces
 	public abstract class BaseReportService
 	{
 		protected IUnitOfWork _db;
+        protected int CountBorderOfReport = 0;
 
-		public BaseReportService(IUnitOfWork DB)
+        public BaseReportService(IUnitOfWork DB)
 		{
 			_db = DB;
 		}
@@ -19,6 +20,16 @@ namespace BLL.Services.Interfaces
 		public abstract IEnumerable<ReportDTO> GetAllWithRate(int page, float Rate);
 		public abstract bool IsValid(ReportDTO report);
 		public abstract void Add(ReportDTO report);
-		public abstract ReportDTO CalculateReport(IEnumerable<ProductDTO> products);
-	}
+
+		public ReportDTO CalculateReport(IEnumerable<ProductDTO> products)
+        {
+            InitCalculation();
+            Calculate(products);
+            return AddFinalReport();
+        }
+
+        public abstract void InitCalculation();
+        public abstract void Calculate(IEnumerable<ProductDTO> products);
+        public abstract ReportDTO AddFinalReport();
+    }
 }
